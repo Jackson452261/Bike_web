@@ -1,0 +1,12 @@
+.error-sec{
+    h1{
+        font-size: clamp(120px, 20.833vw, 850px);
+        font-weight: 600;
+        line-height: 120%;
+        text-align: center;
+        background: linear-gradient(180deg, #FF9AA9 21.48%, rgba(159, 159, 150, 0.00) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

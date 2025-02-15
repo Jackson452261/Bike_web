@@ -1,0 +1,145 @@
+.hero-banner {
+    background: url(../media/banner/hero-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: clamp(72px, 6.25vw, 320px) 0 clamp(20px, 3.9vw, 120px);
+    overflow: hidden;
+    min-height: 100vh;
+
+    @include media-query(1599px){
+        min-height: 80vh;
+        padding-top: 7%;
+    }
+
+    @include media-query(1099px){
+        min-height: auto;
+        padding-top: 18%;
+    }
+    @include media-query(575px){
+        background: url(../media/banner/hero-mobile-bg.png) no-repeat;
+        padding-top: 35%;
+        padding-bottom: 18%;
+    }
+
+    .hero-banner-wrapper {
+        position: relative;
+
+        .background-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(120px, 11.979vw, 450px);
+            font-weight: 800;
+            line-height: normal;
+            letter-spacing: 27.6px;
+            text-transform: uppercase;
+            background: linear-gradient(180deg, #FF9AA9 21.48%, rgba(255, 255, 254, 0.00) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @include media-query(575px){
+                font-size: 71px;
+                font-weight: 800;
+                line-height: normal;
+                letter-spacing: 6.6px;
+            }
+        }
+
+        .hero-slider-wrapper {
+            margin-top: -16px;
+            width: 47.396vw;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: visible;
+
+            @include media-query(1024px){
+                width: 48%;
+            }
+            @include media-query(575px){
+                width: 80%;
+                margin-top: 96px;
+            }
+
+            .slider-container {
+                overflow: visible;
+            }
+
+            .hero-main-image-slider {
+
+                .slick-list {
+                    padding: 0 0 84px !important;
+                    overflow: visible;
+                    @include media-query(575px){
+                        padding: 0 0 48px !important;
+                    }
+                }
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.3s ease-in-out;
+
+                    img {
+                        width: 60%;
+                        @include media-query(992px){
+                            width: 80%;
+                        }
+                    }
+
+                    &.slick-current {
+                        opacity: 1;
+                        -webkit-transform: scale(1.5);
+                        transform: scale(1.5);
+
+                    }
+
+                    &.slick-cloned {
+                        -webkit-transform: scale(0.7);
+                        transform: scale(0.7);
+                    }
+
+                    &.slick-slide {
+                        outline: none
+                    }
+                }
+
+            }
+            .hero-thumb-slider {
+
+                .slick-track {
+                    width: 100% !important;
+                    display: flex;
+                    justify-content: center;
+                    transform: none !important;
+                }
+
+                .thumb-slide {
+                    width: clamp(100px, 7.292vw, 420px);
+                    height: clamp(60px, 5.208vw, 380px);
+                    border: 1px solid $accent-2;
+                    background: $accent-2;
+                    border-radius: $br-8;
+                    margin: 0 8px;
+                    cursor: pointer;
+                    transition: $transition;
+
+                    @include media-query(1024px){
+                        width: auto;
+                        height: auto;
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &.slick-current {
+                        border: 1px solid $accent-1;
+                    }
+                }
+            }
+        }
+    }
+}

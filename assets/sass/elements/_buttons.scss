@@ -1,0 +1,269 @@
+.back-to-top {
+  position: fixed;
+  bottom: 0px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(114px, 6.25vw, 450px);
+  height: clamp(114px, 6.25vw, 450px);
+  font-size: clamp(74px, 5.208vw, 160px);
+  border-radius: 50%;
+  background: $accent-1;
+  color: $white;
+  text-align: center;
+  opacity: 0;
+  text-decoration: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  z-index: 999;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $light-gray;
+    color: $white;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+
+  @include media-query(490px) {
+    right: -20px;
+    bottom: -20px;
+  }
+}
+
+.cus-btn {
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: clamp(12px, 0.845vw, 32px) clamp(24px, 1.667vw, 64px);
+  font-size: clamp(14px, 0.833vw, 48px);
+  font-weight: 500;
+  border-radius: $br-8;
+  cursor: pointer;
+  background: $black;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  transition: $transition;
+  border: 0;
+
+  &:hover {
+    color: $white;
+    &::before {
+      width: 160%;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: $accent-1;
+    transition: $transition;
+    z-index: -1;
+  }
+
+  &.btn-sec{
+    background: $dark-gray;
+  }
+}
+
+
+
+// ===================  SLICK SILDER BUTTONS =================== //
+.slider-arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .arrow-btn {
+    background: $white;
+    border: 1px solid $light-black;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+    padding: 0;
+
+    svg {
+      path {
+        transition: $transition;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $accent-1;
+      transition: $transition;
+      background: $accent-1;
+
+      svg {
+        path {
+          stroke: $white;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}
+
+// ===================  SLICK SILDER BUTTONS =================== // 
+
+// ===================  Quantity BUTTONS =================== //
+.quantity {
+  display: inline-flex;
+  align-items: flex-start;
+  border: 0;
+  border-radius: $br-4;
+  padding: clamp(4px, 0.208vw, 24px) clamp(6px, 0.417vw, 48px);
+  border: 1px solid $black;
+
+  .input-area {
+    display: flex;
+    align-items: center;
+
+    input {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-size: clamp(16px, 0.938vw, 40px);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      text-align: center;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    .decrement {
+      border-radius: $br-4;
+      border: none;
+      background: $accent-2;
+      width: clamp(28px, 1.667vw, 64px);
+      height: clamp(28px, 1.667vw, 64px);
+      transition: $transition;
+      svg{
+        width: clamp(12px, 0.833vw, 40px);
+        path{
+          transition: $transition;
+        }
+      }
+
+      &:hover {
+        background: $accent-1;
+        svg{
+          path{
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    .increment {
+      border-radius: $br-4;
+      border: none;
+      background: $accent-2;
+      width: clamp(28px, 1.667vw, 64px);
+      height: clamp(28px, 1.667vw, 64px);
+      transition: $transition;
+      svg{
+        width: clamp(12px, 0.833vw, 40px);
+        path{
+          transition: $transition;
+        }
+      }
+
+      &:hover {
+        background: $accent-1;
+        svg{
+          path{
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===================  Quantity BUTTONS =================== // 
+
+// ===================  PAGINATIONS =================== // 
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+
+  #border-pagination {
+    display: flex;
+    gap: 8px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline;
+
+      span {
+        color: $dark-gray;
+        transition: $transition;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $white;
+        background-color: $light-gray;
+        width: clamp(36px, 2.5vw, 96px);
+        height: clamp(36px, 2.5vw, 96px);
+        border-radius: 50%;
+        float: left;
+        transition: $transition;
+        font-family: $font-primary;
+        font-size: clamp(14px, 0.833vw, 32px);
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: -0.62px;
+
+        svg {
+          width: clamp(17px, 1.042vw, 32px);
+          height: clamp(17px, 1.042vw, 32px);
+          path {
+            stroke: $white;
+            transition: $transition;
+          }
+        }
+
+        &.active {
+          background-color: $accent-1;
+        }
+
+        &:hover {
+          background-color: $accent-1;
+        }
+      }
+
+      &:hover {
+        span {
+          color: $white;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}

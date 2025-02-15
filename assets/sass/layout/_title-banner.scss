@@ -1,0 +1,19 @@
+.title-banner {
+    background: url(../media/banner/title-banner.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: clamp(200px, 23.698vw, 950px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-query(575px){
+        background-size: 149% 100%;
+    }
+    h1{
+        text-transform: uppercase;
+        font-weight: 700;   
+        color: $medium-black;
+        text-align: center;
+        padding-top: clamp(32px, 2.5vw, 96px);
+    }
+}

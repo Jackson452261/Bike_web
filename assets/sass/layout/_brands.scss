@@ -1,0 +1,16 @@
+
+.brand-slider-wrapper{
+
+    .brand-slider{
+        .brand-image{
+            img{
+                @media (min-width: 2099px){
+                    transform: scale(1.4);
+                }
+                @media (min-width: 3299px){
+                    transform: scale(2);
+                }
+            }
+        }
+    }
+}

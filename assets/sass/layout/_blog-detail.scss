@@ -1,0 +1,164 @@
+.blog-detail-wrapper {
+    .qoutes {
+        padding: clamp(16px, 1.25vw, 32px);
+        border-radius: $br-12;
+        border-left: 2px solid $accent-1;
+        box-shadow: 0px 0px 17px 0px rgba(209, 209, 209, 0.31);
+        svg{
+            width: clamp(26px, 1.927vw, 72px);
+        }
+    }
+
+    .blog-post-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include media-query(1024px) {
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 16px;
+        }
+
+        .blog-post-block {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            @include media-query(575px) {
+                gap: 8px;
+            }
+
+            .arrow-block {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                width: clamp(36px, 2.5vw, 64px);
+                height: clamp(36px, 2.5vw, 64px);
+                border-radius: $br-4;
+                background: $lightest-gray;
+                transition: $transition;
+                border: 1px solid $light-gray;
+
+                svg {
+                    path {
+                        stroke: $light-black;
+                        transition: $transition;
+                    }
+                }
+            }
+
+            .post-text {
+                color: $black;
+                transition: $transition;
+            }
+
+            br {
+                @include media-query(1499px) {
+                    display: none;
+                }
+            }
+
+            .arrow-text {
+                color: $black;
+                transition: $transition;
+            }
+
+            .post-image {
+                width: clamp(48px, 4.167vw, 140px);
+                height: clamp(48px, 4.167vw, 140px);
+            }
+
+            &:hover {
+                .arrow-block {
+                    background: $accent-1;
+
+                    svg {
+                        path {
+                            transition: $transition;
+                            stroke: $white;
+
+                        }
+                    }
+                }
+
+                .post-text {
+                    color: $accent-1;
+                    transition: $transition;
+                }
+
+                .arrow-text {
+                    color: $accent-1;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+
+    .writer-image {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        @include media-query(576px){
+            justify-content: center;
+        }
+        img {
+            width: clamp(120px, 16.667vw, 550px);
+            height: clamp(120px, 16.667vw, 550px);
+        }
+    }
+
+    .review-area {
+        .review-block {
+            display: flex;
+            align-items: flex-start;
+            gap: $gap-16;
+
+            @include media-query(490px) {
+                gap: 8px;
+            }
+
+            &.block-2 {
+                padding-left: clamp(32px, 4.3vw, 120px);
+            }
+
+            .image-box {
+                display: flex;
+                flex-shrink: 0;
+
+                img {
+                    border-radius: 50%;
+                    width: clamp(40px, 3.33vw, 140px);
+                    height: clamp(40px, 3.33vw, 140px);
+                }
+            }
+
+            .text-box {
+                .reply-btn {
+                    color: $accent-1;
+                    transition: $transition;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-tags-wrapper{
+    a{
+        padding: 8px 12px;
+        background: rgba(255, 118, 138, 0.12);
+        border-radius: $br-4;
+        color: $accent-1;
+        transition: $transition;
+        
+        &:hover{
+            background: $accent-2;
+            color: $medium-black;
+            box-shadow: 0px 0px 17px 0px rgba(209, 209, 209, 0.31);
+        }
+    }
+}

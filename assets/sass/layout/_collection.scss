@@ -1,0 +1,81 @@
+.collection-section {
+    .collection-block {
+        background: url(../media/collection/collection-bg.png) no-repeat;
+        background-position: center;
+        background-size: auto;
+        border-radius: $br-12;
+        box-shadow: 0px 4px 12px 0px rgba(122, 121, 121, 0.20);
+        overflow: hidden;
+        @media (min-width: 1999px){
+            background-size: cover;
+        }
+        @include media-query(768px){
+            padding: 32px;
+        }
+        @include media-query(575px){
+            padding: 0;
+        }
+        &.collection-v2{
+            padding: clamp(32px, 2.55vw, 72px) 0 clamp(32px, 2.55vw, 72px);
+            background: $white;
+        }
+
+        .sale-label {
+            padding: 4px clamp(8px, 0.625vw, 18px);
+            border-radius: 32px;
+            background: $accent-1;
+            color: $white;
+            font-weight: 400;
+            display: inline-block;
+            text-wrap: nowrap;
+            @include media-query(699px){
+                font-size: 11px;
+                margin-bottom: 8px;
+                padding: 2px 6px;
+            }
+        }
+
+        .content-box{
+            padding-left: clamp(12px, 1.25vw, 40px) ;
+
+            a{
+                font-weight: 600;
+                color: $accent-1;
+                text-decoration: underline;
+                transition: $transition;
+                &:hover{
+                    color: $black;
+                }
+            }
+        }
+
+        .image-box {
+            border-radius: $br-12;
+            @media (min-width: 1999px){
+                width: 50%;
+            }
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: $br-12;
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -webkit-transition: all 1s linear 0s;
+                @include media-query(768px){
+                    width: 75%;
+                }
+            }
+        }
+        &:hover{
+            .image-box {
+    
+                img {
+                    -webkit-transform: scale(1.2);  
+                    transform: scale(1.2);
+                    -webkit-transition: all 1s linear 0s;
+                    transition: all 1s linear 0s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,177 @@
+/*---------------------------------------------"
+// Template Name: RideAxis
+// Description: RideAxis Html Template
+// Version: 1.0.0
+
+===============================================   
+STYLE SHEET INDEXING
+|
+|___ Fonts
+|___ Variables
+|___ Responsive
+|___ Reset Styles
+|___ Spacing
+|___ Helper Classes
+|___ Buttons
+|___ Headings
+|___ Layout Styles
+|___ END STYLE SHEET INDEXING
+
+--------------------------------------------*/
+
+/*-------------------------
+    Fonts
+-------------------------*/
+
+/// FONT (-- Poppins --)
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/// FONT (-- Inter --)
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*-------------------------
+    Variables
+-------------------------*/
+/* Fonts */
+$font-primary: "Poppins", sans-serif;
+$font-sec: "Inter", sans-serif;
+$font-awesome: "Font Awesome 6 Pro";
+
+/* Colors */
+$accent-1: #FF768A;
+$accent-2: #EDECEC;
+$color-star: #FF7A00;
+$white: #FFFFFF;
+$lightest-gray: #FEFAFD;
+$light-gray: #92949F;
+$dark-gray: #45474F;
+$light-black: #141516;
+$medium-black: #1E1F20;
+$black: #0C0C0D;
+
+/* Transitions */
+$transition: all .5s ease-in-out;
+
+/* Gradients */
+$box-shadow-1: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+$box-shadow-2: 0px 0px 17px 0px rgba(209, 209, 209, 0.31);;
+
+
+/* Border-Radius */
+$br-4: clamp(2px, 0.208vw, 28px);
+$br-6: clamp(3px, 0.313vw, 32px);
+$br-8: clamp(4px, 0.417vw, 36px);
+$br-10: clamp(5px, 0.521vw, 40px);
+$br-12: clamp(8px, 0.625vw, 48px) !important;
+$br-14: clamp(10px, 0.729vw, 54px);
+$br-16: clamp(12px, 0.833vw, 64px);
+$br-18: clamp(14px, 0.938vw, 78px);
+$br-20: clamp(16px, 1.042vw, 88px);
+$br-24: clamp(18px, 1.25vw, 96px);
+$br-32: clamp(24px, 1.667vw, 108px);
+$br-48: clamp(28px, 2.5vw, 120px);
+$br-56: clamp(24px, 2.917vw, 140px);
+$br-64: clamp(40px, 3.333vw, 160px);
+
+
+/* Gap */
+$gap-4: clamp(2px, 0.208vw, 28px);
+$gap-8: clamp(4px, 0.417vw, 36px);
+$gap-10: clamp(5px, 0.521vw, 42px);
+$gap-12: clamp(8px, 0.625vw, 50px);
+$gap-14: clamp(10px, 0.729vw, 62px);
+$gap-16: clamp(12px, 0.833vw, 72px);
+$gap-18: clamp(14px, 0.938vw, 86px)!important;
+$gap-20: clamp(16px, 1.042vw, 96px)!important;
+$gap-24: clamp(18px, 1.25vw, 106px)!important;
+$gap-32: clamp(24px, 1.667vw, 116px);
+$gap-38: clamp(28px, 1.979vw, 124px);
+$gap-48: clamp(40px, 2.5vw, 140px);
+$gap-64: clamp(48px, 3.333vw, 160px);
+
+/*-------------------------
+    Responsive Styles
+-------------------------*/
+
+@import "helpers/mixin";
+
+/*-------------------------
+    Reset Styles
+-------------------------*/
+@import "basic/basic";
+
+/*-------------------------
+Helpers
+-------------------------*/
+@import "helpers/classes";
+
+
+@import "helpers/spacing";
+
+/*-------------------------
+Elements
+-------------------------*/
+
+@import "elements/buttons";
+
+@import "elements/form";
+
+@import "elements/dropdown";
+
+@import "elements/modal-box";
+
+@import "elements/preloader";
+
+@import "elements/popup";
+
+
+/*-------------------------
+  layouts
+-------------------------*/
+@import "layout/header";
+
+@import "layout/hero-banner";
+
+@import "layout/collection";
+
+@import "layout/product-card";
+
+@import "layout/video-banner";
+
+@import "layout/features";
+
+@import "layout/blog";
+
+@import "layout/testimonials";
+
+@import "layout/footer";
+
+@import "layout/cart-sidebar";
+
+@import "layout/title-banner";
+
+@import "layout/team";
+
+@import "layout/brands";
+
+@import "layout/sidebar";
+
+@import "layout/blog-detail";
+
+@import "layout/product-detail";
+
+@import "layout/contact";
+
+@import "layout/404";
+
+@import "layout/cart";
+
+@import "layout/checkout";
+
+// @import "layout/about";
+
+// @import "layout/blog-detail";
+
+// @import "layout/product-detail";
+
+

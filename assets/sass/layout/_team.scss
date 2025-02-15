@@ -1,0 +1,41 @@
+
+.team-sec{
+    .team-member-card{
+        width: 100%;
+        .img-box{
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            border-radius: $br-12;
+            img{
+                border-radius: $br-12;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                -webkit-transition: all 0.35s linear 0s;
+                transition: all 0.35s linear 0s;
+            }
+        }
+        .member-info{
+            h6{
+                color: $medium-black;
+                transition: $transition;
+            }
+        }
+        &:hover{
+            .img-box{
+                img{
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+                    -webkit-transition: all 0.35s linear 0s;
+                    transition: all 0.35s linear 0s;
+                }
+            }
+            .member-info{
+                h6{
+                    color: $accent-1;
+                }
+            }
+        }
+    }
+}
